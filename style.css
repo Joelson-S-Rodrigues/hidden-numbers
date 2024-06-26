@@ -1,0 +1,112 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-size: cover;
+    
+}
+
+
+
+.container {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(3px);
+
+    background-image: url("./assets/forja.png");
+    background-repeat: no-repeat;
+    width: 100% ;
+    height: 100vh;
+    
+}
+
+
+.content{
+    position: relative;
+    top: 150px;
+    height: 28rem;
+    border: 2px solid #ffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 13px 13px 15px #33280a ;
+
+}
+
+.content  h2 {
+    color: #ffff;
+    position: relative;
+    left: 18px;
+    bottom: 20px;
+}
+
+.content h4 {
+    position: relative;
+    color: #ffff;
+    left: 60px;
+}
+.content hr {
+    position: relative;
+    top: 2rem;
+    left: -8px;
+    
+}
+
+
+.form input {
+    position: relative;
+    top: 4rem;
+    border: none;
+    border-style: none;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 6px 6px 15px #000 ;
+    background-color: transparent;
+    border-bottom: 2px solid rgb(219, 152, 27);
+}
+
+.form ::-webkit-input-placeholder{
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+#buttonInput {
+    position: relative;
+    top: 7rem;
+    padding: 10px;
+    width: 11.5rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    color: #ffff;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: rgb(219, 152, 27);
+}
+
+#buttonInput:hover{
+    background-color: rgb(194, 131, 15);
+
+}
+
+.create-acess{
+    position: relative;
+    top: 8rem;
+}
+
+.message{
+    color: #fff;
+    font-size: 15px;
+    position: relative;
+    left: -10px;
+}
+
+.react {
+    position: relative;
+    top: -1px;
+    left: 2px;
+}
