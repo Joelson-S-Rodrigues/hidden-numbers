@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="style.css"  />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 
 </head>
+
 <body>
-    
+
     <div class="container">
         <div class="content">
-        <h2>Espeto de Pau</h2>
-        <h4>- Forjaria - </h4>
-        <hr>
-        <form class="form">
-            <input type="name" name="name"  id="nameInput" placeholder="Digite seu nome"> 
-            
-            <br> <br>
+            <h1>Espeto de Pau</h1>
+            <h4>- Forjaria - </h4>
+            <hr>
+            <div class="formulario">
+                <form class="form">
+                    <input type="name" name="name" id="nameInput" placeholder="Digite seu nome" />
 
-            <input type="password" name="password"  id="passwordInput" placeholder="Digite sua senha">
-            <br> <br>
+                    <br> <br>
 
-            <input type="submit" value="Entrar" id="buttonInput">
-            <p class="create-acess message"> Não possui cadastro? <a href="http://" target="_blank" class="create-acess react">Criar conta</a></p>
-        </form>
+                    <input type="password" name="password" id="passwordInput" placeholder="Digite sua senha" />
+                    <br> <br>
+
+                    <input onclick="game()" type="submit" value="Entrar" id="buttonInput">
+
+
+                    <p class="create-acess message"> Não possui cadastro? <a href="./createAccount.html" target="_blank"
+                            class="create-acess react">Criar conta</a></p>
+                </form>
+            </div>
+        </div>
+
     </div>
 
-    </div>
-
-
+    <script src="./script.js"></script>
 </body>
+
 </html>
