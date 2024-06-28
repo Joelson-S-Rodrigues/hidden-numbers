@@ -13,34 +13,36 @@
     background-image: url("./assets/forja.png");
     width: 100% ;
     height: 100vh;
-    
 }
 
 .content{
     position: relative;
-    top: 150px;
-    width: 20rem;
+    margin:10rem;
+    width: 35rem;
     height: 28rem;
     padding: 50px;
     border-radius: 8px;
     box-shadow: 13px 13px 15px #33280a ;
+    border: 2px solid #000000;
     background-color: rgba(255, 255, 255, 0.7);
-    border: 2px solid #000000
+    flex: 2
 
 }
 
 .content  h1 {
     position: relative;
+    left: 4rem;
     font-family: "Permanent Marker", cursive;
     font-weight: 400;
+    font-size: 3rem;
     bottom: 12px;
 }
 
 .content h4 {
     position: relative;
-    left: 25px;
+    left: 130px;
     top: -20px ;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-family: "Permanent Marker", cursive;
     font-weight: 400;
 }
@@ -48,21 +50,21 @@
     position: relative;
     left: -10px;
     border-top: 1px solid black;
-    width: 15rem;
+    width: 30rem;
     border-radius: 8px;
 }
 
-.form input {
+.form .forminput {
     position: relative;
     top: 1.5rem;
     border: none;
     left: -0.5rem;
     border-style: none;
-    padding: 10px;
+    padding: 15px;
     border-radius: 8px;
-    box-shadow: 6px 6px 15px #000 ;
+    box-shadow: 2px 2px 4px #000 ;
     background-color: transparent;
-    width: 15rem;
+    width: 30rem;
 }
 
 .form ::-webkit-input-placeholder{
@@ -70,43 +72,84 @@
     font-size: 15px;
 }
 
+.checkInput {
+    width: 2rem;
+    height: 1.4rem;
+    position: relative;
+    top: 1.7rem;
+}
+
+input[type='checkbox'] {
+    accent-color: rgb(219, 152, 27);
+  }
+
+.rememberPassword {
+    position: relative;
+    top: 1.4rem;
+    font-weight: 600;
+}
+
+
+
 #buttonInput {
     position: relative;
     top: 3rem;
-    padding: 10px;
-    width: 15rem;
+    padding: 15px;
+    width: 30rem;
     border-radius: 8px;
     border: none;
     cursor: pointer;
-    color: #ffff;
-    font-size: 15px;
+    color: #000;
+    font-size: 20px;
     font-weight: bold;
+    box-shadow: 1px 1px 10px #000 ;
+
     background-color: rgb(219, 152, 27);
 }
 
 #buttonInput:hover{
     background-color: rgb(194, 131, 15);
+    box-shadow: 2px 2px 12px #000 ;
+}   
+
+
+.createNewPassword{
+    font-size: 15px;
+    position: relative;
+    left: 3rem;
+    top: 4.5rem;
+    font-size: 1.3rem;
 }
 
-.create-acess{
-    top: 8rem;
-    flex-direction: column;
+.forgotPassword{
+    color: #000;
+    text-decoration: none;
+
+}
+
+.forgotPassword:hover{
+    border-bottom: 2px solid  rgb(194, 131, 15); 
+
 }
 
 .message{
     font-size: 15px;
     position: relative;
-    top: 4rem;
+    left: 19rem;
+    top: 3.1rem;
     display: flex;
-    flex-direction: column;
-    text-align: center;
+    font-size: 1.3rem;
 
 }
 
 .react {
     position: relative;
     top: -1px;
-    left: 2px;
-    color: blue;
+    color: #000;
+    text-decoration: none;
     
+}
+
+.react:hover {
+    border-bottom: 2px solid  rgb(194, 131, 15); 
 }

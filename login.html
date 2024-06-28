@@ -21,17 +21,23 @@
             <hr>
             <div class="formulario">
                 <form class="form">
-                    <input type="name" name="name" id="nameInput" placeholder="Digite seu nome" />
+                    <input type="name" name="name" id="nameInput" placeholder="Usuário" class="forminput"/>
 
                     <br> <br>
 
-                    <input type="password" name="password" id="passwordInput" placeholder="Digite sua senha" />
+                    <input type="password" name="password" id="passwordInput" placeholder="Senha" class="forminput" />
                     <br> <br>
 
-                    <input onclick="game()" type="submit" value="Entrar" id="buttonInput">
+                    <input type="checkbox" name="check" id="checkInput" class="checkInput">
+                    <label for="check" class="rememberPassword "> Lembrar senha</label>
+                    
+                    <input onclick="game()" type="submit" value="Entrar" id="buttonInput" class="forminput">
 
+                    <p class="createNewPassword">
+                      <a href="#" target="_blank" class="forgotPassword ">  Esqueceu sua senha?
+                    </p> </a> 
 
-                    <p class="create-acess message"> Não possui cadastro? <a href="./createAccount.html" target="_blank"
+                    <p class="create-acess message">  <a href="./createAccount.html" target="_blank"
                             class="create-acess react">Criar conta</a></p>
                 </form>
             </div>
