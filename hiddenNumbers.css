@@ -2,18 +2,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 
+body {
+    cursor: url('assets/marteloimg.gif');
+  }
 
 .container {
     background-image: url("./assets/forjaGame.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100% ;
-    height: 100vh;
+    height: 110vh;
 }
-
 
 .headerGame {
     width: 100%;
@@ -29,9 +32,7 @@
     left: 1rem;
     animation: anim-stars 5s linear infinite;
 }
-
  
-
 @keyframes anim-stars {
     0% {
         transform: translateY(0px);
@@ -46,12 +47,10 @@
     }
 }
 
-
-
 .icons {
     display: flex;
     position: relative;
-    top: -2.8rem;
+    top: -3.9rem;
     right: 2rem;
     gap: 15px;
     justify-content: end;
@@ -59,15 +58,43 @@
 }
 
 .icons img:hover{
-    opacity: 0.8;
+    opacity: 0.6;
 }
+
+.scoreboard{
+    background-color: rgba(173, 167, 167, 0.4);
+    position: relative;
+    left: 18rem;
+    top: 1rem;
+    width: 75rem;
+    height: 3.5rem;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    top: 15px;
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    gap: 22rem;
+}
+
  .content {
-    background-color: rgba(173, 167, 167, 0.6);
+    background-image: url("assets/forjaria.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
     left:15%;
-    top: 5rem;
-     width: 55rem;
-    height: 34rem;
+    top: 2rem;
+     width: 75rem;
+    height: 41rem;
     border-radius: 8px;
 }
 
@@ -76,20 +103,61 @@
     position: relative;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
-    top: -3rem;
-    left: 56rem;
+    left: 76rem;
     width: 6rem;
-    height: 34rem;
+    height: 41rem;
     
 }
 
-.scoreboard{
-    background-color: rgba(173, 167, 167, 0.6);
-    position: relative;
-    width: 55rem;
-    height: 3rem;
-    top: -3.5rem;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+#numero {
+    font-size: 28px;
+    opacity: 0.3;
+  }
 
-}
+  aside.numberList {
+    text-align: center; /* center the numbers */
+  }
+  
+  aside.numberList span {
+    display: inline-block; /* make the spans inline-block */
+    width: 50%; /* set width to 50% */
+    margin: 10px; /* add some margin */
+    vertical-align: top; /* align vertically to top */
+    color: #fff;
+  }
+
+  /* @media only screen and (min-width: 599px) {
+   
+    .container {
+        max-width: 100%;
+    }
+    .headerGame {
+        padding: 15px;
+    }
+    .icons img {
+        width: 40px;
+        height: 40px;
+        margin: 8px;
+    }
+    .scoreboard {
+        padding: 15px;
+    }
+    .score span {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+    #attempts, #numbers-found, #time {
+        margin-bottom: 15px;
+    }
+    #remaining-attempts, #hits-, #time-left {
+        font-size: 20px;
+    }
+    .content {
+        padding: 15px;
+    }
+    #numero {
+        font-size: 20px;
+        margin: 8px;
+        padding: 8px;
+    }
+} */

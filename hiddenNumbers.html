@@ -1,40 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Satira Rock</title>
     <link rel="stylesheet" href="hiddenNumbers.css">
-    
+
 </head>
+
 <body>
     <div class="container">
-    <header class="headerGame">
-        <div class="whatermelon">
-            <img src="./assets/mel.png"  alt="icone melancia" >
+        <header class="headerGame">
+            <div class="whatermelon">
+                <img src="./assets/mel.png" alt="icone melancia">
 
-        </div>
-        <div class="icons"> 
+            </div>
+            <div class="icons">
 
-            <a href="https://tonelazarotti.blogspot.com/p/pergunta-premiada-video-achoqui.html" target="_blank">
-                <img src="./assets/blogger.png" alt="blogger">
-            </a>
-            <a href="https://www.youtube.com/@tonelazarotti-laza9909" target="_blank"> 
-                <img src="./assets/youtube.png" alt="youtube">
-            </a>
+                <a href="https://tonelazarotti.blogspot.com/p/pergunta-premiada-video-achoqui.html" target="_blank">
+                    <img src="./assets/blogger.png" width="50px" alt="blogger">
+                </a>
+                <a href="https://www.youtube.com/@tonelazarotti-laza9909" target="_blank">
+                    <img src="./assets/youtube.png" width="50px" alt="youtube">
+                </a>
 
-        </div>
-      
+            </div>
 
 
-    </header>
 
-    <section class="content">
-        <nav class="scoreboard"></nav>
-        <aside class="numberList">
-        </aside>
-    </section>
-</div>
+        </header>
 
+        <nav class="scoreboard">
+            <div class="score">
+                <div id="attempts">
+                    <!-- tentativas restantes -->
+                    <span id="remaining-attempts">
+                        3 /
+                    </span>
+
+                    <span id="remaining">
+                        Tentativas
+                    </span>
+                </div>
+                <!-- números encontrados -->
+                <div id="numbers-found">
+                    <span> Acertos </span>
+                    <span id="hits-">
+                        0 /
+                    </span>
+
+                    <span id="remaining">
+                        12
+                    </span>
+                </div>
+
+
+                <div id="time">
+                    <span class="time-text">Tempo</span>
+                    <!-- tempo restante -->
+                    <span id="time-left">30s</span>
+                    <audio id="time-up-audio" src="assets/satira.mp3"></audio>
+                  </div>
+
+        </nav>
+
+        <section class="content">
+
+
+            <span id="numero">44</span>
+            <span id="numero">45</span>
+            <span id="numero">47</span>
+            <span id="numero">48</span>
+            <span id="numero">49</span>
+            <span id="numero">50</span>
+            <span id="numero">51</span>
+            <span id="numero">52</span>
+            <span id="numero">53</span>
+            <span id="numero">54</span>
+            <span id="numero">55</span>
+            <audio id="audio" src="assets/martelo.mp3"></audio>
+
+            <aside class="numberList">
+            </aside>
+        </section>
+    </div>
+    <script src="hiddenNumbers.js"></script>
 </body>
+
 </html>

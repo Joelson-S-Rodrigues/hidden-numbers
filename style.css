@@ -67,6 +67,12 @@
     width: 30rem;
 }
 
+input:-webkit-autofill {
+    transition: background-color 5000s;
+    background-color: transparent !important;
+    font-size: 17px;
+  }
+
 .form ::-webkit-input-placeholder{
     font-weight: bold;
     font-size: 15px;
