@@ -68,21 +68,40 @@
         <section class="content">
 
 
-            <span id="numero">44</span>
-            <span id="numero">45</span>
-            <span id="numero">47</span>
-            <span id="numero">48</span>
-            <span id="numero">49</span>
-            <span id="numero">50</span>
-            <span id="numero">51</span>
-            <span id="numero">52</span>
-            <span id="numero">53</span>
-            <span id="numero">54</span>
-            <span id="numero">55</span>
+            <span class="numero">44</span>
+            <span class="numero">45</span>
+            <span class="numero">47</span>
+            <span class="numero">48</span>
+            <span class="numero">49</span>
+            <span class="numero">50</span>
+            <span class="numero">51</span>
+            <span class="numero">52</span>
+            <span class="numero">53</span>
+            <span class="numero">54</span>
+            <span class="numero">55</span>
             <audio id="audio" src="assets/martelo.mp3"></audio>
 
             <aside class="numberList">
             </aside>
+
+            <div id="game-modal" class="modal">
+                <div class="modal-content">
+                  <span id="close-modal" class="close">&times;</span>
+                  <img id="modal-image" src="assets/aviso-derrota.png" alt="Modal Image">
+                  <p id="modal-message"></p>
+                </div>
+              </div>
+
+              <div id="congratulations-modal" class="modal">
+                <div class="modal-content">
+                  <span id="close-congratulations-modal" class="close">&times;</span>
+                  <img id="congratulations-modal-image" src="assets/ganhador.png" alt="Congratulations Image">
+                  <p id="congratulations-modal-message">Parabéns! Você encontrou todos os números.</p>
+                </div>
+              </div>
+
+
+
         </section>
     </div>
     <script src="hiddenNumbers.js"></script>

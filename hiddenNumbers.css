@@ -5,17 +5,15 @@
     
 }
 
-
-body {
-    cursor: url('assets/marteloimg.gif');
-  }
-
 .container {
     background-image: url("./assets/forjaGame.jpg");
+    background-size: auto 100%;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     width: 100% ;
     height: 110vh;
+
 }
 
 .headerGame {
@@ -25,7 +23,7 @@ body {
 }
 
 .whatermelon >img {
-    width: 80px;
+    width: 70px;
     position: relative;
     top: 0.2rem;
     margin: 0.1rem;
@@ -50,7 +48,7 @@ body {
 .icons {
     display: flex;
     position: relative;
-    top: -3.9rem;
+    top: -3.2rem;
     right: 2rem;
     gap: 15px;
     justify-content: end;
@@ -64,7 +62,7 @@ body {
 .scoreboard{
     background-color: rgba(173, 167, 167, 0.4);
     position: relative;
-    left: 18rem;
+    left: 4.2rem;
     top: 1rem;
     width: 75rem;
     height: 3.5rem;
@@ -77,13 +75,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
     position: relative;
-    top: 15px;
-    font-size: 1.5rem;
+    top: 1px;
     font-family: 'Times New Roman', Times, serif;
     color: white;
     gap: 22rem;
+}
+.score numbers-found{
+    font-size: 10px;
 }
 
  .content {
@@ -91,7 +90,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    left:15%;
+    left:5%;
     top: 2rem;
      width: 75rem;
     height: 41rem;
@@ -103,16 +102,65 @@ body {
     position: relative;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
-    left: 76rem;
-    width: 6rem;
-    height: 41rem;
+    left: 74.5rem;
+    width: 4.4rem;
+    height: 41.1rem;
+    bottom: 1.1rem;
     
 }
 
-#numero {
-    font-size: 28px;
-    opacity: 0.3;
+.numero {
+    font-size: 34px;
+    /* opacity: 0.2; */
   }
+
+  /* Modal Container */
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed; /* Fixo no fundo */
+    z-index: 1; /* Fica na frente de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    overflow: auto; /* Habilita o scroll se necessário */
+    background-color: rgba(0, 0, 0, 0.4); /* Fundo preto com opacidade */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    margin: 15% auto; /* 15% do topo e centralizado */
+    padding: 10px;
+    width: 40%; /* 80% da largura */
+    max-width: 400px; /* Largura máxima */
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  /* Botão de Fechar */
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #000;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .close:hover{
+    color: red;
+  }
+  
+  /* Estilize a imagem */
+  .modal-content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  
 
   aside.numberList {
     text-align: center; /* center the numbers */
@@ -126,18 +174,23 @@ body {
     color: #fff;
   }
 
-  /* @media only screen and (min-width: 599px) {
+   @media only screen and (min-width: 599px) {
    
     .container {
         max-width: 100%;
+        height: 110vh;
+        
+
     }
     .headerGame {
-        padding: 15px;
+        padding: 7px;
+        position: relative;
+        
     }
     .icons img {
         width: 40px;
         height: 40px;
-        margin: 8px;
+        margin: 2px;
     }
     .scoreboard {
         padding: 15px;
@@ -151,6 +204,7 @@ body {
     }
     #remaining-attempts, #hits-, #time-left {
         font-size: 20px;
+        font-size: 2rem;
     }
     .content {
         padding: 15px;
@@ -160,4 +214,5 @@ body {
         margin: 8px;
         padding: 8px;
     }
-} */
+} 
+

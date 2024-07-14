@@ -3,95 +3,83 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-size: cover;
 }
 
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background-image: url("./assets/forja.png");
+    background-size: cover;
     width: 100%;
     height: 100vh;
 }
 
 .content {
     position: relative;
-    margin: 10rem;
-    width: 35rem;
-    height: 28rem;
+    width: 80%; /* Reduzi a largura para melhorar a adaptação em telas menores */
+    max-width: 35rem; /* Largura máxima para conteúdo */
+    height: auto; /* Ajustei para altura automática */
     padding: 50px;
     border-radius: 8px;
     box-shadow: 13px 13px 15px #33280a;
     border: 2px solid #000000;
     background-color: rgba(255, 255, 255, 0.7);
-    flex: 2;
 }
 
 .content h2 {
-    position: relative;
-    left: 7.0rem;
     font-family: "Permanent Marker", cursive;
     font-weight: 400;
-    bottom: 12px;
     font-size: 2rem;
+    text-align: center; /* Centralizei o texto */
 }
 
 .content h4 {
-    position: relative;
-    left: 10.0rem;
-    top: -15px;
-    font-size: 1.4rem;
     font-family: "Permanent Marker", cursive;
     font-weight: 400;
+    font-size: 1.4rem;
+    text-align: center; /* Centralizei o texto */
 }
 
 .content hr {
-    position: relative;
-    left: -10px;
     border-top: 1px solid black;
-    width: 30rem;
-    border-radius: 8px;
+    width: 100%; /* Largura máxima da linha */
+    margin: 20px auto; /* Centralizei a linha */
 }
 
 .form input {
-    position: relative;
-    top: 1.5rem;
     border: none;
-    left: -0.5rem;
-    border-style: none;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 2px 2px 4px #000;
     background-color: transparent;
-    width: 30rem;
+    width: 100%; /* Largura máxima para o input */
+    margin-bottom: 15px; /* Espaçamento entre os inputs */
 }
 
 input:-webkit-autofill {
     transition: background-color 5000s;
     background-color: transparent !important;
     font-size: 17px;
-  }
+}
 
 .form ::-webkit-input-placeholder {
     font-weight: bold;
     font-size: 15px;
 }
 
-
-
 #buttonInput {
-    position: relative;
     padding: 15px;
-    width: 30rem;
     border-radius: 8px;
     border: none;
     cursor: pointer;
     color: #000;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
     background-color: rgb(219, 152, 27);
-    font-size: 20px;
+    width: 100%; /* Largura máxima para o botão */
+    margin-top: 15px; /* Espaçamento acima do botão */
 }
 
 #buttonInput:hover {
@@ -100,20 +88,33 @@ input:-webkit-autofill {
 }
 
 .react {
-    position: relative;
-    left: 2rem;
     text-decoration: none;
     color: #000;
+    text-align: center; /* Centralizei o texto */
 }
 
 .message {
-    font-size: 15px;
-    position: relative;
-    top: 2.4rem;
-    left: 5rem;
     font-size: 1.3rem;
+    text-align: center; /* Centralizei o texto */
+    margin-top: 15px; /* Espaçamento acima da mensagem */
 }
 
 .react:hover {
     border-bottom: 2px solid rgb(194, 131, 15);
+}
+
+/* Media queries para telas menores */
+
+@media only screen and (max-width: 768px) {
+    .content {
+        padding: 30px; /* Reduzi o padding para telas menores */
+    }
+
+    .content h2 {
+        font-size: 1.5rem; /* Reduzi o tamanho do título */
+    }
+
+    .content h4 {
+        font-size: 1rem; /* Reduzi o tamanho do subtítulo */
+    }
 }
