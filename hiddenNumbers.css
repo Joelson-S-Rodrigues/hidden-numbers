@@ -2,7 +2,40 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+}
+
+.game-container {
+    cursor: none;
+    position: relative;
+    z-index: 999; 
+}
+
+.custom-cursor {
+    width: 32px; 
+    height: 32px;
+    position: absolute;
+    pointer-events: none; /* Faz com que o cursor não interfira em eventos de mouse */
+    background: url('./assets/martelo.png') no-repeat center center;
+    background-size: contain;
+    transform-origin: top left;
+    z-index: 1000;
+    display: none;
+}
+
+body.hammer-click .custom-cursor {
+    animation: hammer-hit 0.3s;
+}
+
+@keyframes hammer-hit {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-45deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 .container {
@@ -13,13 +46,12 @@
     background-position: center;
     width: 100% ;
     height: 110vh;
-
 }
 
 .headerGame {
     width: 100%;
     height: 6rem;
-    background-color: rgba(228, 179, 179, 0.6);
+    background-color: rgba(133, 131, 131, 0.6);
 }
 
 .whatermelon >img {
@@ -98,7 +130,7 @@
 }
 
 .numberList{
-    background-color: rgba(173, 167, 167, 0.6);
+    background-color: rgba(125, 123, 123, 0.6);
     position: relative;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
@@ -111,7 +143,7 @@
 
 .numero {
     font-size: 34px;
-    /* opacity: 0.2; */
+    opacity: 0.2;
   }
 
   /* Modal Container */
@@ -159,8 +191,6 @@
     height: auto;
     margin-bottom: 20px;
   }
-  
-  
 
   aside.numberList {
     text-align: center; /* center the numbers */
@@ -179,13 +209,10 @@
     .container {
         max-width: 100%;
         height: 110vh;
-        
-
     }
     .headerGame {
         padding: 7px;
-        position: relative;
-        
+        position: relative;  
     }
     .icons img {
         width: 40px;

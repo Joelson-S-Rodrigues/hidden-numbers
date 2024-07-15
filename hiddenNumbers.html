@@ -1,110 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Satira Rock</title>
-    <link rel="stylesheet" href="hiddenNumbers.css">
+    <link rel="stylesheet" href="hiddenNumbers.css" />
+    <link rel="icon" href="assets/favicon.png" type="image/x-icon">
+  </head>
 
-</head>
+  <body>
+    <div class="container game-container">
+      <header class="headerGame">
+        <div class="whatermelon">
+          <img src="./assets/mel.png" alt="icone melancia" />
+        </div>
+        <div class="icons">
+          <a
+            href="https://tonelazarotti.blogspot.com/p/pergunta-premiada-video-achoqui.html"
+            target="_blank"
+          >
+            <img src="./assets/blogger.png" width="50px" alt="blogger" />
+          </a>
+          <a
+            href="https://www.youtube.com/@tonelazarotti-laza9909"
+            target="_blank"
+          >
+            <img src="./assets/youtube.png" width="50px" alt="youtube" />
+          </a>
+        </div>
+      </header>
 
-<body>
-    <div class="container">
-        <header class="headerGame">
-            <div class="whatermelon">
-                <img src="./assets/mel.png" alt="icone melancia">
+      <nav class="scoreboard">
+        <div class="score">
+          <div id="attempts">
+            <span id="remaining-attempts">3 /</span>
+            <span id="remaining">Tentativas</span>
+          </div>
+          <div id="numbers-found">
+            <span>Acertos</span>
+            <span id="hits-">0 /</span>
+            <span id="remaining">12</span>
+          </div>
+          <div id="time">
+            <span class="time-text">Tempo</span>
+            <span id="time-left">30s</span>
+            <audio id="time-up-audio" src="assets/satira.mp3"></audio>
+          </div>
+        </div>
+      </nav>
 
-            </div>
-            <div class="icons">
+      <section class="content">
+        <span class="numero">44</span>
+        <span class="numero">45</span>
+        <span class="numero">47</span>
+        <span class="numero">48</span>
+        <span class="numero">49</span>
+        <span class="numero">50</span>
+        <span class="numero">51</span>
+        <span class="numero">52</span>
+        <span class="numero">53</span>
+        <span class="numero">54</span>
+        <span class="numero">55</span>
+        <audio id="audio" src="assets/martelo.mp3"></audio>
 
-                <a href="https://tonelazarotti.blogspot.com/p/pergunta-premiada-video-achoqui.html" target="_blank">
-                    <img src="./assets/blogger.png" width="50px" alt="blogger">
-                </a>
-                <a href="https://www.youtube.com/@tonelazarotti-laza9909" target="_blank">
-                    <img src="./assets/youtube.png" width="50px" alt="youtube">
-                </a>
+        <aside class="numberList"></aside>
 
-            </div>
+        <div id="game-modal" class="modal">
+          <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <img
+              id="modal-image"
+              src="assets/aviso-derrota.png"
+              alt="Modal Image"
+            />
+            <p id="modal-message"></p>
+          </div>
+        </div>
 
-
-
-        </header>
-
-        <nav class="scoreboard">
-            <div class="score">
-                <div id="attempts">
-                    <!-- tentativas restantes -->
-                    <span id="remaining-attempts">
-                        3 /
-                    </span>
-
-                    <span id="remaining">
-                        Tentativas
-                    </span>
-                </div>
-                <!-- números encontrados -->
-                <div id="numbers-found">
-                    <span> Acertos </span>
-                    <span id="hits-">
-                        0 /
-                    </span>
-
-                    <span id="remaining">
-                        12
-                    </span>
-                </div>
-
-
-                <div id="time">
-                    <span class="time-text">Tempo</span>
-                    <!-- tempo restante -->
-                    <span id="time-left">30s</span>
-                    <audio id="time-up-audio" src="assets/satira.mp3"></audio>
-                  </div>
-
-        </nav>
-
-        <section class="content">
-
-
-            <span class="numero">44</span>
-            <span class="numero">45</span>
-            <span class="numero">47</span>
-            <span class="numero">48</span>
-            <span class="numero">49</span>
-            <span class="numero">50</span>
-            <span class="numero">51</span>
-            <span class="numero">52</span>
-            <span class="numero">53</span>
-            <span class="numero">54</span>
-            <span class="numero">55</span>
-            <audio id="audio" src="assets/martelo.mp3"></audio>
-
-            <aside class="numberList">
-            </aside>
-
-            <div id="game-modal" class="modal">
-                <div class="modal-content">
-                  <span id="close-modal" class="close">&times;</span>
-                  <img id="modal-image" src="assets/aviso-derrota.png" alt="Modal Image">
-                  <p id="modal-message"></p>
-                </div>
-              </div>
-
-              <div id="congratulations-modal" class="modal">
-                <div class="modal-content">
-                  <span id="close-congratulations-modal" class="close">&times;</span>
-                  <img id="congratulations-modal-image" src="assets/ganhador.png" alt="Congratulations Image">
-                  <p id="congratulations-modal-message">Parabéns! Você encontrou todos os números.</p>
-                </div>
-              </div>
-
-
-
-        </section>
+        <div id="congratulations-modal" class="modal">
+          <div class="modal-content">
+            <span id="close-congratulations-modal" class="close">&times;</span>
+            <img
+              id="congratulations-modal-image"
+              src="assets/ganhador.png"
+              alt="Congratulations Image"
+            />
+            <p id="congratulations-modal-message">
+              Parabéns! Você encontrou todos os números.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
-    <script src="hiddenNumbers.js"></script>
-</body>
 
+    <div class="custom-cursor"></div>
+
+    <script src="hiddenNumbers.js"></script>
+  </body>
 </html>

@@ -20,11 +20,12 @@ function startTimer() {
       clearInterval(timerInterval);
       audioElement.pause();
       audioElement.currentTime = 0;
-      showModal("Seu tempo acabou", "path/to/time-up-image.jpg");
+      // showModal("Seu tempo acabou", "path/to/time-up-image.jpg");
       resetGame();
     }
   }, 1000);
 }
+
 
 // Reset do timer
 function resetTimer() {
@@ -90,15 +91,34 @@ function showModal(message, imageUrl) {
   };
 }
 
+const customCursor = document.querySelector('.custom-cursor');
+
+document.addEventListener('mousemove', (e) => {
+    customCursor.style.left = `${e.pageX}px`;
+    customCursor.style.top = `${e.pageY}px`;
+    customCursor.style.display = 'block'; // Mostrar o cursor personalizado
+});
+
+document.addEventListener('mousedown', () => {
+    document.body.classList.add('hammer-click');
+    customCursor.classList.add('hammer-click');
+});
+
+document.addEventListener('mouseup', () => {
+    document.body.classList.remove('hammer-click');
+    customCursor.classList.remove('hammer-click');
+});
+
+
 // Inicialização do jogo: carrega elementos e inicia o timer
 document.addEventListener('DOMContentLoaded', () => {
-  audio = new Audio('assets/martelo.mp3');
   exibirNumeros();
   startTimer();
 });
 
 // Função para exibir números na tela
 function exibirNumeros() {
+  audio = new Audio('assets/martelo.mp3');
   const spans = document.querySelectorAll('span.numero');
   const aside = document.querySelector('aside.numberList');
   aside.innerHTML = '';
@@ -136,7 +156,7 @@ function exibirNumeros() {
     span.style.top = `${position.y}px`;
     span.style.left = `${position.x}px`;
 
-    span.addEventListener('click', () => {
+    span.onclick = function() {
       if (gameRunning) {
         audio.play();
         span.style.opacity = 1;
@@ -147,7 +167,7 @@ function exibirNumeros() {
         span.style.left = '0px';
         increaseHits();
       }
-    });
+    };
   });
 
   document.body.addEventListener('click', (event) => {
