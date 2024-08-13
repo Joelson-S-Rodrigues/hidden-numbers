@@ -10,25 +10,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-image: url("./assets/forja.png");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
-  min-width: 768px;
-  min-height: 200px;
+  width: 100%;
+  padding: 20px;
 }
 
 .content {
-  margin: 5rem auto;
-  width: 36%;
-  height: 64vh;
-  padding: 50px;
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
   border-radius: 8px;
   box-shadow: 13px 13px 15px #33280a;
   border: 2px solid #000000;
   background-color: rgba(255, 255, 255, 0.7);
-  max-width: 36%;
-  max-height: 64vh;
 }
 
 .content h1 {
@@ -43,48 +41,33 @@
   font-family: "Permanent Marker", cursive;
   font-weight: 400;
   text-align: center;
+  margin-bottom: 20px;
 }
 
-
-
 .form .forminput {
-  position: relative;
-  left: 1.7rem;
   padding: 11px;
   border-radius: 8px;
   box-shadow: 2px 2px 4px #000;
   background-color: transparent;
-  width: 25vw;
+  width: 100%;
   font-size: 18px;
+  margin-bottom: 15px;
 }
 
 .checkInput {
   width: 20px;
   height: 20px;
-  position: relative;
-  left: 1.8rem;
-}
-
-input:-webkit-autofill {
-  transition: background-color 5000s;
-  background-color: transparent !important;
-  font-size: 17px;
-}
-
-input[type="checkbox"] {
-  accent-color: rgb(219, 152, 27);
+  accent-color: rgb(219, 152, 27); /* Mantém a tonalidade alaranjada */
 }
 
 .rememberPassword {
   font-size: 18px;
-  position: relative;
-  left: 1.8rem;
-  bottom: 0.2rem;
+  margin-left: 5px;
 }
 
 #buttonInput {
   padding: 11px;
-  width: 25vw;
+  width: 100%;
   border-radius: 8px;
   border: none;
   cursor: pointer;
@@ -93,8 +76,7 @@ input[type="checkbox"] {
   font-weight: bold;
   box-shadow: 1px 1px 10px #000;
   background-color: rgb(219, 152, 27);
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 20px;
 }
 
 #buttonInput:hover {
@@ -102,92 +84,92 @@ input[type="checkbox"] {
   box-shadow: 2px 2px 12px #000;
 }
 
-.createNewPassword {
-  font-size: 18px;
-  position: relative;
-  left: 2rem;
-
+.align-create-account {
+  text-align: center;
+  margin-top: 20px;
+  display: flex; /* Alinha os elementos lado a lado */
+  justify-content: center;
 }
 
-.forgotPassword {
-  color: #000;
-  text-decoration: none;
-
-}
-
-.forgotPassword:hover {
-  border-bottom: 2px solid rgb(194, 131, 15);
-}
-
+.forgotPassword,
 .react {
   color: #000;
   text-decoration: none;
-  font-size: 18px;
-  position:relative ;
-  bottom: 1.4rem;
-  left: 18rem;
+  font-size: 18px; 
+  margin-right: 10px; /* Espaçamento entre os links */
 }
 
+.forgotPassword:hover,
 .react:hover {
   border-bottom: 2px solid rgb(194, 131, 15);
 }
 
-/* Media queries */
-
-@media only screen and (max-width: 1024px) {
-  .container {
-    max-width: 100%;
-  }
-
+@media (max-width: 1024px) {
   .content {
-    width: 80%;
-    max-height: 50vh;
-    padding: 50px; /* Reduzindo o padding para telas menores */
+    padding: 30px;
   }
 
   .content h1 {
-    font-size: 2rem; /* Reduzindo o tamanho do título */
+    font-size: 2rem;
   }
 
   .content h4 {
-    font-size: 1.5rem; /* Reduzindo o tamanho do subtítulo */
+    font-size: 1.5rem;
   }
 
-  .form {
-    width: 90%;
-    margin: 1rem auto;
+  .form .forminput {
+    font-size: 16px;
+  }
+
+  #buttonInput {
+    font-size: 22px;
   }
 }
 
-@media only screen and (max-width: 768px) {
-  .container {
-    background-size: 100% 100vh;
-  }
-
+@media (max-width: 768px) {
   .content {
-    width: 90%;
-    max-height: 50vh;
-    height: auto;
-    padding: 30px; 
+    padding: 20px;
   }
 
   .content h1 {
-    font-size: 1.5rem; 
+    font-size: 1.8rem;
   }
 
   .content h4 {
-    font-size: 1rem; 
+    font-size: 1.2rem;
   }
 
-  .form {
-    width: 90%;
-    margin: 1rem auto;
+  .form .forminput {
+    font-size: 16px;
   }
 
-  .react, .createNewPassword {
-    display: flex;
-    flex-direction: column;
-    
+  #buttonInput {
+    font-size: 20px;
   }
 }
 
+@media (max-width: 480px) {
+  .content {
+    padding: 15px;
+  }
+
+  .content h1 {
+    font-size: 1.5rem;
+  }
+
+  .content h4 {
+    font-size: 1rem;
+  }
+
+  .form .forminput {
+    font-size: 14px;
+  }
+
+  #buttonInput {
+    font-size: 18px;
+  }
+
+  .rememberPassword {
+    font-size: 16px;
+  }
+}

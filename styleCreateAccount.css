@@ -14,14 +14,13 @@
     background-size: cover;
     width: 100%;
     height: 100vh;
+    padding: 20px;
 }
 
 .content {
-    position: relative;
-    width: 80%; /* Reduzi a largura para melhorar a adaptação em telas menores */
-    max-width: 35rem; /* Largura máxima para conteúdo */
-    height: auto; /* Ajustei para altura automática */
-    padding: 50px;
+    width: 100%;
+    max-width: 400px; /* Largura máxima para melhor adaptação em diferentes telas */
+    padding: 40px;
     border-radius: 8px;
     box-shadow: 13px 13px 15px #33280a;
     border: 2px solid #000000;
@@ -32,30 +31,31 @@
     font-family: "Permanent Marker", cursive;
     font-weight: 400;
     font-size: 2rem;
-    text-align: center; /* Centralizei o texto */
+    text-align: center;
 }
 
 .content h4 {
     font-family: "Permanent Marker", cursive;
     font-weight: 400;
     font-size: 1.4rem;
-    text-align: center; /* Centralizei o texto */
+    text-align: center;
 }
 
 .content hr {
     border-top: 1px solid black;
-    width: 100%; /* Largura máxima da linha */
-    margin: 20px auto; /* Centralizei a linha */
+    width: 100%;
+    margin: 20px 0;
 }
 
 .form input {
     border: none;
-    padding: 15px;
+    padding: 11px;
     border-radius: 8px;
     box-shadow: 2px 2px 4px #000;
     background-color: transparent;
-    width: 100%; /* Largura máxima para o input */
-    margin-bottom: 15px; /* Espaçamento entre os inputs */
+    width: 100%;
+    font-size: 18px;
+    margin-bottom: 15px;
 }
 
 input:-webkit-autofill {
@@ -70,16 +70,16 @@ input:-webkit-autofill {
 }
 
 #buttonInput {
-    padding: 15px;
+    padding: 11px;
     border-radius: 8px;
     border: none;
     cursor: pointer;
     color: #000;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
     background-color: rgb(219, 152, 27);
-    width: 100%; /* Largura máxima para o botão */
-    margin-top: 15px; /* Espaçamento acima do botão */
+    width: 100%;
+    margin-top: 20px;
 }
 
 #buttonInput:hover {
@@ -87,34 +87,63 @@ input:-webkit-autofill {
     box-shadow: 2px 2px 12px #000;
 }
 
+.message {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 15px;
+    
+}
+
 .react {
     text-decoration: none;
     color: #000;
-    text-align: center; /* Centralizei o texto */
-}
-
-.message {
-    font-size: 1.3rem;
-    text-align: center; /* Centralizei o texto */
-    margin-top: 15px; /* Espaçamento acima da mensagem */
-}
+    font-size: 18px;
+    position: relative;
+    left: 20px;
+    }
 
 .react:hover {
     border-bottom: 2px solid rgb(194, 131, 15);
 }
 
-/* Media queries para telas menores */
+/* Ajustes para a linha de "Já possui cadastro?" */
+.linerBottom {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 15px;
+    position: relative;
+    left: -30px;
+}
 
-@media only screen and (max-width: 768px) {
+/* Media queries para telas menores */
+@media (max-width: 1024px) {
     .content {
-        padding: 30px; /* Reduzi o padding para telas menores */
+        padding: 30px;
     }
 
     .content h2 {
-        font-size: 1.5rem; /* Reduzi o tamanho do título */
+        font-size: 1.5rem;
     }
 
     .content h4 {
-        font-size: 1rem; /* Reduzi o tamanho do subtítulo */
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 20px;
+    }
+
+    .content h2 {
+        font-size: 1.3rem;
+    }
+
+    .content h4 {
+        font-size: 0.9rem;
+    }
+
+    .message {
+        font-size: 1.1rem;
     }
 }

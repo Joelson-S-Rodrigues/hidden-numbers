@@ -124,10 +124,12 @@ function exibirNumeros() {
   aside.innerHTML = '';
 
   const takenPositions = [];
+  const visibleNumbers = new Set(); // Conjunto para armazenar números visíveis
 
+  // Função para obter uma posição aleatória sem sobreposição
   function getRandomPosition() {
     const maxX = Math.min(window.innerWidth, 1000) + 100;
-    const maxY = Math.min(window.innerHeight, 500) + 100;
+    const maxY = Math.min(window.innerHeight, 400) + 100;
     let x, y;
     do {
       x = Math.floor(Math.random() * maxX);
@@ -145,6 +147,67 @@ function exibirNumeros() {
       }
     } while (true);
   }
+
+  // Função para calcular a distância entre duas posições
+  function distance(pos1, pos2) {
+    return Math.sqrt(Math.pow(pos2.x - pos1.x, 2) + Math.pow(pos2.y - pos2.y, 2));
+  }
+
+  // Seleciona 5 números aleatórios para serem visíveis
+  while (visibleNumbers.size < 5) {
+    const randomIndex = Math.floor(Math.random() * spans.length);
+    visibleNumbers.add(randomIndex);
+  }
+
+  spans.forEach((span, index) => {
+    const position = getRandomPosition();
+    span.style.position = 'absolute';
+    span.style.top = `${position.y}px`;
+    span.style.left = `${position.x}px`;
+
+    // Define a opacidade dos números
+    if (visibleNumbers.has(index)) {
+      span.style.opacity = 1; // Visível
+    } else {
+      span.style.opacity = 0.3; // Parcialmente visível
+    }
+
+    // Ajuste: Evitar perda de tentativa ao clicar em um número
+    span.addEventListener('click', (event) => {
+      event.stopPropagation(); // Impede que o clique se propague para o body e conte como erro
+      if (gameRunning) {
+        audio.play();
+        span.style.opacity = 1; // Tornar o número totalmente visível ao clicar
+        span.style.color = '#ffffff';
+        aside.appendChild(span);
+        span.style.position = 'relative';
+        span.style.top = '0px';
+        span.style.left = '0px';
+        increaseHits();
+      }
+    });
+  });
+
+  // Manter a lógica para cliques fora dos números
+  document.body.addEventListener('click', (event) => {
+    if (gameRunning) {
+      const clickedElement = event.target;
+      if (clickedElement.tagName === 'SECTION') {
+        decreaseAttempts();
+      }
+    }
+  });
+}
+
+  document.body.addEventListener('click', (event) => {
+    if (gameRunning) {
+      const clickedElement = event.target;
+      if (clickedElement.tagName === 'SECTION') {
+        decreaseAttempts();
+      }
+    }
+  });
+
 
   function distance(pos1, pos2) {
     return Math.sqrt(Math.pow(pos2.x - pos1.x, 2) + Math.pow(pos2.y - pos1.y, 2));
@@ -178,4 +241,4 @@ function exibirNumeros() {
       }
     }
   });
-};
+
